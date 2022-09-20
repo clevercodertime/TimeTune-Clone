@@ -1,20 +1,105 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<!-- <ion-menu contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      
+        
+          <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+          </ion-buttons>
+        
+     
+      <ion-title>Menu Content</ion-title>
+      
+    </ion-toolbar>
+    
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-item>one</ion-item>
+    <ion-item>two</ion-item>
+    <ion-item>three</ion-item>
+    <ion-item>four</ion-item>
+    <ion-item>five</ion-item>
+    <ion-item>six</ion-item>
+    <ion-item>seven</ion-item>
+    
+  </ion-content>
+</ion-menu> -->
+
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="tit"> Tue, Sep 20, 2022 </ion-title>
+      <ion-icon class="ic1" slot="end" name="calendar-clear-outline"></ion-icon>
+      <ion-button color="light" slot="end" id="click-trigger"><ion-icon name="ellipsis-vertical-outline"></ion-icon></ion-button>
+<ion-popover  trigger="click-trigger" triggerAction="click">
+  <ng-template>
+    <ion-content class="ion-padding"> 
+    <ion-item id="bottom-start">Silenc notification 
+      <ion-popover trigger="bottom-start" side="bottom" alignment="start">
+        <ng-template>
+          <ion-content class="ion-padding">
+            
+            Hello World!</ion-content>
+        </ng-template>
+      </ion-popover>
+     </ion-item>
+    <ion-item>Day summary</ion-item>
+    <ion-item routerLink="/settings">Settings</ion-item>
+    <ion-item>Help</ion-item> </ion-content>
+  </ng-template>
+</ion-popover>
+
+
+<!-- i will use for scroll
+<ion-button id="hover-trigger">Hover Over Me</ion-button>
+<ion-popover trigger="hover-trigger" triggerAction="hover">
+  <ng-template>
+    <ion-content class="ion-padding">Hello World!</ion-content>
+  </ng-template>
+</ion-popover> -->
     </ion-toolbar>
   </ion-header>
+  <ion-content class="ion-padding">
+    Tap the button in the toolbar to open the menu.
+    
+    <!--Creatining a tab menu-->
+    <ion-tabs class="iontabs1">
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button routerLink="/ionic" tab="Schedule">
+          <ion-icon name="calendar-clear-outline"></ion-icon>
+          <ion-label>Schedule</ion-label>
+          <!-- <ion-badge>6</ion-badge> -->
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/routine" tab="Routines">
+          <ion-icon name="time-outline"></ion-icon>
+          <ion-label>Routines</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/set-routines" tab="Set Routines">
+          <ion-icon name="hammer-outline"></ion-icon>
+          <ion-label>Set Routines</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/blocks" tab="Blocks">
+          <ion-icon name="cube-outline"></ion-icon>
+          <ion-label>Blocks</ion-label>
+        </ion-tab-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+        <ion-tab-button routerLink="/tags" tab="Tags">
+          <ion-icon name="pricetags-outline"></ion-icon>
+          <ion-label>Tags</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+
+
+
+
+
+  </ion-content>
+</div>
