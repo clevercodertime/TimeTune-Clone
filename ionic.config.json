@@ -1,0 +1,7 @@
+{
+  "name": "ionica",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
